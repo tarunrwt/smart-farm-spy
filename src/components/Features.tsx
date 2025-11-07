@@ -36,28 +36,28 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-24 md:py-32 bg-muted/20">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">
             Complete Crop Health Solution
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Everything you need to protect your crops and maximize yield in one powerful platform
           </p>
         </div>
         
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="h-6 w-6 text-primary" />
+              <Card key={index} className="border-border/50 bg-card backdrop-blur hover:border-primary/30 transition-all duration-300 hover:shadow-elevated group">
+                <CardHeader className="space-y-4">
+                  <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-7 w-7 text-primary" />
                   </div>
-                  <CardTitle>{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
                 </CardHeader>
               </Card>
             );
